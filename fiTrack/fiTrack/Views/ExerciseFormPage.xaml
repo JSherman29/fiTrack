@@ -1,0 +1,38 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="fiTrack.Views.ExerciseFormPage"
+             xmlns:button="clr-namespace:Syncfusion.XForms.Buttons;assembly=Syncfusion.Buttons.XForms">
+    <ContentPage.ToolbarItems>
+        <ToolbarItem x:Name="Save" Clicked="Save_Clicked" />
+    </ContentPage.ToolbarItems>
+    <ContentPage.Content>
+        <StackLayout HorizontalOptions="Center" VerticalOptions="Center">
+            <StackLayout Orientation="Horizontal">
+                <Label Text="Exercise Name: " FontSize="18" VerticalOptions="Center" />
+                <Entry x:Name="NameEntry" HorizontalOptions="FillAndExpand" WidthRequest="200">
+                    <Entry.Keyboard>
+                        <Keyboard x:FactoryMethod="Create">
+                            <x:Arguments>
+                                <KeyboardFlags>CapitalizeWord</KeyboardFlags>
+                            </x:Arguments>
+                        </Keyboard>
+                    </Entry.Keyboard>
+                </Entry>
+            </StackLayout>
+            <StackLayout Orientation="Horizontal">
+                <Label Text="Primary Muscle: " FontSize="18" VerticalOptions="Center" />
+                <Picker x:Name="MuscleGroupsPicker" ItemsSource="{StaticResource MuscleGroups}" HorizontalOptions="FillAndExpand" 
+                        WidthRequest="200" />
+            </StackLayout>
+            <StackLayout Orientation="Horizontal" HorizontalOptions="Center">
+                <button:SfCheckBox x:Name="RepsCheck" Text="Has Reps" />
+                <button:SfCheckBox x:Name="WeightCheck" Text="Has Weight" />
+            </StackLayout>
+            <StackLayout Orientation="Horizontal" HorizontalOptions="Center">
+                <button:SfCheckBox x:Name="TimeCheck" Text="Has Time" />
+                <button:SfCheckBox x:Name="DistanceCheck" Text="Has Distance" />
+            </StackLayout>
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>

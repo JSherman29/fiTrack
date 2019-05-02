@@ -1,0 +1,41 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="fiTrack.Views.ExercisePage"
+             xmlns:datagrid="clr-namespace:Syncfusion.SfDataGrid.XForms;assembly=Syncfusion.SfDataGrid.XForms"
+            xmlns:button="clr-namespace:Syncfusion.XForms.Buttons;assembly=Syncfusion.Buttons.XForms">
+    <ContentPage.ToolbarItems>
+        <ToolbarItem Text="Add" Clicked="Add_Clicked" />
+    </ContentPage.ToolbarItems>
+    <ContentPage.Content>
+        <StackLayout>
+            <Label Text="No exercises in database." FontAttributes="Italic" HorizontalOptions="Center" TextColor="Gray"
+                   x:Name="lblNoData" IsVisible="False" VerticalOptions="Center" />
+
+            <datagrid:SfDataGrid x:Name="ExerciseGrid" AutoGenerateColumns="False" HorizontalOptions="CenterAndExpand" 
+                                 ColumnSizer="LastColumnFill" GridLongPressed="ExerciseGrid_GridLongPressed">
+
+                <datagrid:SfDataGrid.GroupColumnDescriptions>
+                    <datagrid:GroupColumnDescription ColumnName="PrimaryMuscle" />
+                </datagrid:SfDataGrid.GroupColumnDescriptions>
+
+                <datagrid:SfDataGrid.Columns>
+
+                    <datagrid:GridTextColumn MappingName="Name" TextAlignment="Center" CellTextSize="20">
+                        <datagrid:GridTextColumn.HeaderTemplate>
+                            <DataTemplate>
+                                <Frame Padding="0" OutlineColor="Black">
+                                    <Label Text="Exercises" HorizontalOptions="FillAndExpand" HorizontalTextAlignment="Center"
+                                               FontAttributes="Bold" FontSize="22" BackgroundColor="LightGray" TextColor="Black" />
+                                </Frame>
+                            </DataTemplate>
+                        </datagrid:GridTextColumn.HeaderTemplate>
+                    </datagrid:GridTextColumn>
+
+                </datagrid:SfDataGrid.Columns>
+
+            </datagrid:SfDataGrid>
+
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>

@@ -1,0 +1,40 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<TabbedPage xmlns="http://xamarin.com/schemas/2014/forms"
+            xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+            xmlns:views="clr-namespace:fiTrack.Views"
+            x:Class="fiTrack.Views.MainPage">
+    <!--<TabbedPage.ToolbarItems>
+        <ToolbarItem x:Name="SettingsButton" Icon="Images/settings.png" Clicked="SettingsButton_Clicked" />
+    </TabbedPage.ToolbarItems>-->
+    <TabbedPage.Children>
+        <!--<NavigationPage Title="Home">
+            <x:Arguments>
+                <views:HomePage />
+            </x:Arguments>
+        </NavigationPage>-->
+
+        <!--<NavigationPage Title="Today">
+            <x:Arguments>
+                <views:TodayPage />
+            </x:Arguments>
+        </NavigationPage>-->
+
+        <!--<NavigationPage Title="Journal">
+            <x:Arguments>
+                <views:JournalPage />
+            </x:Arguments>
+        </NavigationPage>-->
+
+        <NavigationPage Title="Exercises">
+            <x:Arguments>
+                <views:ExercisePage />
+            </x:Arguments>
+        </NavigationPage>
+
+        <!--<NavigationPage Title="Routines">
+            <x:Arguments>
+                <views:RoutinesPage />
+            </x:Arguments>
+        </NavigationPage>-->
+    </TabbedPage.Children>
+</TabbedPage>
