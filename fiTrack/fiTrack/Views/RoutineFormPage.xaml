@@ -1,0 +1,18 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+xmlns:listview="clr-namespace:Syncfusion.ListView.XForms;assembly=Syncfusion.SfListView.XForms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="fiTrack.Views.RoutineFormPage">
+    <ContentPage.ToolbarItems>
+        <ToolbarItem x:Name="AddExercise" Text="Add" Clicked="AddExercise_Clicked" />
+        <ToolbarItem x:Name="SaveRoutine" Text="Save" Clicked="SaveRoutine_Clicked" />
+    </ContentPage.ToolbarItems>
+    <ContentPage.Content>
+        <StackLayout>
+            <Label Text="No routines in database." FontAttributes="Italic" HorizontalOptions="Center" TextColor="Gray"
+                   x:Name="lblNoData" IsVisible="False" VerticalOptions="Center" />
+            <listview:SfListView x:Name="listView" ItemsSource=""/>
+            <listview:SfListView x:Name="ExerciseList" />
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>

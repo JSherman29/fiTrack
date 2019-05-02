@@ -30,7 +30,7 @@ namespace fiTrack
         {
             Database.CreateTable<Exercise>();
             Database.CreateTable<Routine>();
-
+            Database.CreateTable<RoutineMapping>();
         }
 
         #region Exercise Methods

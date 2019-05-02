@@ -1,0 +1,41 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="fiTrack.Views.RoutinesPage"
+             xmlns:datagrid="clr-namespace:Syncfusion.SfDataGrid.XForms;assembly=Syncfusion.SfDataGrid.XForms">
+    <ContentPage.ToolbarItems>
+        <ToolbarItem Text="New" x:Name="NewRoutine" Clicked="NewRoutine_Clicked" />
+    </ContentPage.ToolbarItems>
+    <ContentPage.Content>
+        <StackLayout>
+            <StackLayout Orientation="Horizontal" x:Name="AddRoutineLayout" IsVisible="False" HorizontalOptions="Center">
+                <Label Text="Name: " FontSize="18" VerticalOptions="Center" />
+                <Entry x:Name="NameEntry" WidthRequest="250" />
+                <Button x:Name="AddRoutine" Text="Add" Clicked="AddRoutine_Clicked" />
+            </StackLayout>
+
+            <Label Text="No routines in database." FontAttributes="Italic" HorizontalOptions="Center" TextColor="Gray"
+                   x:Name="lblNoData" IsVisible="False" VerticalOptions="Center" />
+
+            <datagrid:SfDataGrid x:Name="RoutineGrid" AutoGenerateColumns="False" HorizontalOptions="CenterAndExpand" 
+                                 ColumnSizer="LastColumnFill" GridLongPressed="RoutineGrid_GridLongPressed">
+
+                <datagrid:SfDataGrid.Columns>
+
+                    <datagrid:GridTextColumn MappingName="Name" TextAlignment="Center" CellTextSize="20">
+                        <datagrid:GridTextColumn.HeaderTemplate>
+                            <DataTemplate>
+                                <Frame Padding="0" OutlineColor="Black">
+                                    <Label Text="Routines" HorizontalOptions="FillAndExpand" HorizontalTextAlignment="Center"
+                                               FontAttributes="Bold" FontSize="22" BackgroundColor="LightGray" TextColor="Black" />
+                                </Frame>
+                            </DataTemplate>
+                        </datagrid:GridTextColumn.HeaderTemplate>
+                    </datagrid:GridTextColumn>
+
+                </datagrid:SfDataGrid.Columns>
+
+            </datagrid:SfDataGrid>
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>

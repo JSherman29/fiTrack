@@ -31,10 +31,10 @@
             </x:Arguments>
         </NavigationPage>
 
-        <!--<NavigationPage Title="Routines">
+        <NavigationPage Title="Routines">
             <x:Arguments>
                 <views:RoutinesPage />
             </x:Arguments>
-        </NavigationPage>-->
+        </NavigationPage>
     </TabbedPage.Children>
 </TabbedPage>

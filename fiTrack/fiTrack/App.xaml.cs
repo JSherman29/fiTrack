@@ -8,11 +8,11 @@ namespace fiTrack
 {
     public partial class App : Application
     {
-
+        
         public App()
         {
+            Syncfusion.Licensing.SyncfusionLicenseProvider.RegisterLicense("OTcwMzNAMzEzNzJlMzEyZTMwTUNuUmRkNDJmV1VNby80S3gvMWJCMDVoUHpoNEs0SGtiTGxPQmtuQ2EwQT0=");
             InitializeComponent();
-
 
             MainPage = new MainPage();
         }
@@ -20,6 +20,7 @@ namespace fiTrack
         protected override void OnStart()
         {
             // Handle when your app starts
+            DataAccess.CreateTables();
         }
 
         protected override void OnSleep()

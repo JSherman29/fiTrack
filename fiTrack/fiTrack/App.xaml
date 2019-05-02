@@ -3,6 +3,15 @@
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              x:Class="fiTrack.App">
     <Application.Resources>
+        <x:Array x:Key="MuscleGroups" Type="{x:Type x:String}">
+            <x:String>Chest</x:String>
+            <x:String>Back</x:String>
+            <x:String>Shoulders</x:String>
+            <x:String>Core</x:String>
+            <x:String>Arms</x:String>
+            <x:String>Legs</x:String>
+        </x:Array>
+        
         <ResourceDictionary>
             <!--Global Styles-->
             <Color x:Key="NavigationPrimary">#2196F3</Color>
